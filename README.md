@@ -22,7 +22,7 @@ Inverse Distance Weighting interpolation. Predictions are a distance-weighted av
 Universal Kriging interpolation that accounts for large-scale spatial trends in x and y. Automatically fits a spherical variogram model to the trend residuals.
 
 ### `compare_rasters()`
-A diagnostic tool for comparing any two `SpatRaster` outputs. Reprojects and resamples both rasters to a common grid, then computes and plots their pixel-wise difference on a diverging Red-Blue colour scale. Prints mean difference, MAE, RMSE, and min/max statistics to the console. Supports optional min-max normalisation for comparing methods with different value ranges.
+A  tool for comparing any two `SpatRaster`s. Reprojects and resamples both rasters to a common grid, then computes and plots their pixel-wise difference on a Red-Blue color scale. Prints mean difference, MAE, RMSE, and min/max statistics to the console. Optional min-max normalisation for comparing methods with different value ranges.
 
 ---
 
