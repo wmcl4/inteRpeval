@@ -137,7 +137,7 @@ NearNeigh <- function(spatial_list, count = 5, plot = FALSE) {
   }
   
   cat("Nearest Neighbor - Relative performance:", 1 - mean(rmsenn) / null, "\n")
-  if (plot) plot(nmask, main = paste("Nearest Neighbor Prediction: ",dep_var))
+  if (plot) terra::plot(nmask, main = paste("Nearest Neighbor Prediction:", dep_var))
   
   invisible(nmask)
 }
@@ -188,8 +188,7 @@ InvDistWt <- function(spatial_list, plot = FALSE) {
   }
   
   cat("IDW - Relative performance:", 1 - mean(rmsenn) / null, "\n")
-  if (plot) plot(idwr, 1, main = paste("IDW Prediction: ",dep_var))
-  
+  if (plot) terra::plot(idwr, 1, main = paste("IDW Prediction:", dep_var))  
   invisible(idwr)
 }
 
@@ -282,8 +281,7 @@ UniversalKriging <- function(spatial_list, count = 12, plot = FALSE) {
   }
   
   cat("Universal Kriging - Relative performance:", 1 - mean(rmseuk) / null, "\n")
-  if (plot) plot(ukr, 1, main = paste("Universal Kriging Prediction: ", dep_var))
-  
+  if (plot) terra::plot(ukr, 1, main = paste("Universal Kriging Prediction:", dep_var))  
   invisible(ukr)
 }
 
