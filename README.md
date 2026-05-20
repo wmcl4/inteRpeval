@@ -4,6 +4,13 @@ An R package for basic spatial interpolation and raster comparison, built around
 
 ---
 
+##Install
+```r
+library(remotes)
+remotes::install_github("wmcl4/inteRpeval")
+```
+---
+
 ## Functions
 
 ### `prepare_spatial_data()`
