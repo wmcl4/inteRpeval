@@ -119,7 +119,7 @@ NearNeigh <- function(spatial_list, count = 5, plot = FALSE) {
   
   gs <- gstat(formula = formula_obj, locations = ~x+y,
                  data = df, nmax = count, set = list(idp = 0))
-  nn <- interpolate(r, gs, debug.level = 0)
+  nn <- interpolate(r, gs, debug.level = 0)[[1]]   # keep var1.pred only
   nmask <- mask(nn, vr)
   
   # Cross-validation
@@ -170,7 +170,7 @@ InvDistWt <- function(spatial_list, plot = FALSE) {
   # Restricted to the nearest 12 stations for forced "local"
   gs <- gstat(formula = formula_obj, locations = ~x+y, data = df, 
               nmax = 12, set = list(idp = 2)) #current idp weighting = 2
-  idw <- interpolate(r, gs, debug.level = 0)
+  idw <- interpolate(r, gs, debug.level = 0)[[1]]
   idwr <- mask(idw, vr)
   
   # Cross-validation
@@ -252,7 +252,7 @@ UniversalKriging <- function(spatial_list, count = 12, plot = FALSE) {
   # Build gstat object using the trend model and local neighborhood restriction
   gs <- gstat(formula = formula_obj, locations = ~x+y, data = df, 
                 model = f_mod, nmax = count)
-  uk <- interpolate(r, gs, debug.level = 0)
+  uk  <- interpolate(r, gs, debug.level = 0)[[1]]
   ukr <- mask(uk, vr)
   
   # Cross-validation
