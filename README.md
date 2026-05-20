@@ -26,7 +26,7 @@ A  tool for comparing any two `SpatRaster`s. Reprojects and resamples both raste
 
 ---
 
-## Basic Workflow
+## Basic Overview
 
 ```r
 library(inteRpeval)
@@ -65,11 +65,11 @@ compare_rasters(
 
 ---
 
-## Acknowledgements
+### Acknowledgements
 
 Special thanks to **Robert Hijmans** and the [**rspat**](https://rspatial.org) project for their spatial interpolation tutorials and the code foundations for this package.
 ---
 
-## Author
+#### Author
 
 William McLoughlin
